@@ -5,15 +5,12 @@ using System.Text;
 namespace Assignment5
 {
     public enum RaceCategory { Elf, Orc, Human }
-    public enum Gender { Male, Female }
     public class Character
     {
         public string Name { get; set; }
         public RaceCategory Race { get; set; }
         public int Health { get; set; }
-
         public bool IsAlive { get; set; }
-
         public int MaxHealth { get; set; }
 
         /// <summary>
@@ -31,6 +28,7 @@ namespace Assignment5
         /// <param name="hp"></param>
         public Character(string name, RaceCategory race, int hp)
         {
+            MaxHealth = hp;
             Health = hp;
             Race = race;
             Name = name;
@@ -54,6 +52,11 @@ namespace Assignment5
         public void RestoreHealth(int amount)
         {
             Health = 1;
+        }
+
+        public override string ToString()
+        {
+            return string.Format("{0} : {1} - HP {2}/{3} ", Name, Race, Health, MaxHealth);
         }
     }
 }
