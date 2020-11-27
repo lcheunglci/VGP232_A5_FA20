@@ -63,7 +63,7 @@ namespace Assignment5
                     found.Amount = 1;
 
                     i.Key.Amount--;
-                    if (i.Value > 0)
+                    if (i.Value > 1)
                     {
                         //reduce the amount
                         items[i.Key]--;

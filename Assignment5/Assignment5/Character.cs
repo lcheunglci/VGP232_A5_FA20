@@ -66,6 +66,7 @@ namespace Assignment5
                     Health = MaxHealth;
                 }
             }
+            
         }
 
         public override string ToString()
