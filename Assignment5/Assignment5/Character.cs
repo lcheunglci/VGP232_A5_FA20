@@ -62,6 +62,7 @@ namespace Assignment5
             {
                 Health = MaxHealth;
             }
+            IsAlive = Health > 0;
         }
 
         public override string ToString()

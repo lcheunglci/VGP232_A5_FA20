@@ -45,7 +45,7 @@ namespace Assignment5
                 Console.WriteLine("{0} has died.", hero.Name);
             }
 
-            Console.WriteLine("Welcome to the Adventure of Assignment 5!");
+            Console.WriteLine("\nWelcome to the Adventure of Assignment 5!");
 
             // TODO: Create an inventory
             // TODO: Add 2 items to the inventory

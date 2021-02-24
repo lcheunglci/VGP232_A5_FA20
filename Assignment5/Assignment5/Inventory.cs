@@ -37,6 +37,10 @@ namespace Assignment5
             availableSlots = maxSlots;
         }
 
+        public Inventory()
+        {
+        }
+
         /// <summary>
         /// Removes all the items, and restore the original number of slots.
         /// </summary>
@@ -87,10 +91,9 @@ namespace Assignment5
             // returns false if the inventory is full
             foreach(var key in items.Keys)
             {
-                if(item == key)
+                if(item.Name == key.Name && item.Amount == key.Amount && item.Group == key.Group)
                 {
                     ++items[key];
-                    availableSlots--;
                     return true;
                 }
             }
@@ -100,6 +103,7 @@ namespace Assignment5
             }
 
             items.Add(item, 1);
+            availableSlots--;
             return true;
         }
 
